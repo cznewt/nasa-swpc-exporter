@@ -14,7 +14,7 @@ logging.basicConfig(
 
 SWPC_SOLAR_WIND_URL = 'http://services.swpc.noaa.gov/products/solar-wind/plasma-1-day.json'
 SWPC_MEASURE_INTERVAL = int(os.getenv('SWPC_MEASURE_INTERVAL', 60))
-SWPC_LISTEN_PORT =  int(os.getenv('SWPC_LISTEN_PORT', 9444))
+SWPC_LISTEN_PORT =  int(os.getenv('SWPC_LISTEN_PORT', 9468))
 
 wind_density = Gauge('solar_wind_density', 'Solar wind particle density')
 wind_speed = Gauge('solar_wind_speed', 'Solar wind speed')
