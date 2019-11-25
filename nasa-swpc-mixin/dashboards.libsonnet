@@ -1,4 +1,4 @@
-local grafana = import 'grafonnet/grafana.libsonnet';
+local grafana = import 'vendor/grafonnet/grafana.libsonnet';
 local dashboard = grafana.dashboard;
 local row = grafana.row;
 local singlestat = grafana.singlestat;
@@ -139,4 +139,4 @@ local prometheus_ds = 'default';
         { w: 18, h: 5, x: 6, y: 10 }
       )
   }
-};
+}
