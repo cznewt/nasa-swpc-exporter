@@ -24,15 +24,6 @@ local prometheus_ds = 'default';
           label='Data Source',
         )
       )
-      .addTemplate(
-        template.new(
-          'job',
-          '$PROMETHEUS_DS',
-          'label_values(solar_wind_speed, job)',
-          label='Job',
-          refresh='time',
-        )
-      )
       .addPanel(
         singlestat.new(
           'Current Solar Wind Speed',
@@ -42,7 +33,7 @@ local prometheus_ds = 'default';
         )
         .addTarget(
           prometheus.target(
-            'solar_wind_speed{job=~"$job"}',
+            'solar_wind_speed',
             datasource='$PROMETHEUS_DS',
           )
         ),
@@ -59,7 +50,7 @@ local prometheus_ds = 'default';
         )
         .addTarget(
           prometheus.target(
-            'solar_wind_speed{job=~"$job"}',
+            'solar_wind_speed',
             datasource='$PROMETHEUS_DS',
             legendFormat='solar wind speed',
           )
@@ -75,7 +66,7 @@ local prometheus_ds = 'default';
         )
         .addTarget(
           prometheus.target(
-            'solar_wind_density{job=~"$job"}',
+            'solar_wind_density',
             datasource='$PROMETHEUS_DS',
           )
         ),
@@ -92,7 +83,7 @@ local prometheus_ds = 'default';
         )
         .addTarget(
           prometheus.target(
-            'solar_wind_density{job=~"$job"}',
+            'solar_wind_density',
             datasource='$PROMETHEUS_DS',
             legendFormat='solar wind density',
           )
@@ -111,7 +102,7 @@ local prometheus_ds = 'default';
         )
         .addTarget(
           prometheus.target(
-            'solar_wind_temperature{job=~"$job"}',
+            'solar_wind_temperature',
             datasource='$PROMETHEUS_DS',
           )
         ),
@@ -128,7 +119,7 @@ local prometheus_ds = 'default';
         )
         .addTarget(
           prometheus.target(
-            'solar_wind_temperature{job=~"$job"}',
+            'solar_wind_temperature',
             datasource='$PROMETHEUS_DS',
             legendFormat='solar wind temperature',
           )
