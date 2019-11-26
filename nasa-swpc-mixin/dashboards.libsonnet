@@ -14,7 +14,7 @@ local prometheus_ds = 'default';
         'Solar Wind (NOAA DSCOVR)',
         refresh='1m',
         editable=true,
-        tags=['nasa_swpc_exporter', 'prometheus_ds'],
+        tags=['nasa-swpc-mixin'],
       )
       .addTemplate(
         grafana.template.datasource(
