@@ -1,0 +1,49 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: nasa
+spec:
+  type: organization
+  profile:
+    displayName: NASA  
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nasa-swpc-exporter
+  description: Prometheus exporter for current space-weather data collected from NASA NOAA Space Weather Prediction Center.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    demo.backstage.io/techdocs-builder: local
+spec:
+  domain: monitoring
+  type: service
+  consumesApis:
+    - nasa-swpc-api
+  providesApis:
+    - monitoring:prometheus-metric-api
+  lifecycle: production
+  owner: group:monitoring
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: nasa-noaa-swpc
+  description: NASA NOAA Space Weather Prediction Center
+spec:
+  type: api
+  owner: group:nasa
+  system: nasa-swpc
+  providesApis:
+    - nasa-swpc-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: nasa-swpc-api
+  description: NASA NOAA SWPC API
+spec:
+  type: rest
+  lifecycle: production
+  owner: group:nasa
+  definition: n/a
