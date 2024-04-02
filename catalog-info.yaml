@@ -5,7 +5,7 @@ metadata:
 spec:
   type: organization
   profile:
-    displayName: NASA  
+    displayName: NASA
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -18,8 +18,8 @@ metadata:
 spec:
   domain: monitoring
   type: service
-  consumesApis:
-    - nasa-swpc-api
+  dependsOn:
+    - nasa-noaa-swpc
   providesApis:
     - monitoring:prometheus-metric-api
   lifecycle: production
@@ -31,19 +31,6 @@ metadata:
   name: nasa-noaa-swpc
   description: NASA NOAA Space Weather Prediction Center
 spec:
-  type: api
+  type: rest-api
   owner: group:nasa
-  system: nasa-swpc
-  providesApis:
-    - nasa-swpc-api
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: nasa-swpc-api
-  description: NASA NOAA SWPC API
-spec:
-  type: rest
-  lifecycle: production
-  owner: group:nasa
-  definition: n/a
+

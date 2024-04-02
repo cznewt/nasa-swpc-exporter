@@ -3,7 +3,7 @@
 Simple Prometheus exporter for current space-weather data collected from NASA NOAA
 Space Weather Prediction Center.
 
-## Implemented APIs 
+## Implemented APIs
 
 * Plasma - Solar Wind Electron Proton Alpha Monitor (SWEPAM)
 
