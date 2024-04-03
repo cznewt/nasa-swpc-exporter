@@ -6,6 +6,7 @@ spec:
   type: organization
   profile:
     displayName: NASA
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -33,4 +34,3 @@ metadata:
 spec:
   type: rest-api
   owner: group:nasa
-
