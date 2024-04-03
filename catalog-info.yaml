@@ -2,16 +2,16 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: nasa
-spec:
-  type: organization
-  profile:
-    displayName: NASA
-  children: []
   links:
     - url: https://www.nasa.gov/
       title: Homepage
       icon: documentation
       type: documentation
+spec:
+  type: organization
+  profile:
+    displayName: NASA
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -39,11 +39,11 @@ kind: Resource
 metadata:
   name: nasa-noaa-swpc
   description: NASA NOAA Space Weather Prediction Center
-spec:
-  type: rest-api
-  owner: group:nasa
   links:
     - url: https://www.swpc.noaa.gov/
       title: Homepage
       icon: documentation
       type: documentation
+spec:
+  type: rest-api
+  owner: group:nasa
