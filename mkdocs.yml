@@ -5,3 +5,4 @@ plugins:
 
 nav:
   - Home: index.md
+  - Telemetry: telemetry.md
