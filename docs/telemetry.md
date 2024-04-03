@@ -7,9 +7,9 @@ Exposed telemetry data.
 
 | Name | Type | Unit | Labels | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| solar_wind_density | Gauge | - | Solar wind particle density. |
-| solar_wind_speed | Gauge | - | Solar wind speed. |
-| solar_wind_temperature | Gauge | - | Solar wind temperature. |
+| solar_wind_density | Gauge | atoms/cm&sup3; | - | Solar wind particle density. |
+| solar_wind_speed | Gauge | km/s | - | Solar wind speed. |
+| solar_wind_temperature | Gauge | K | - | Solar wind temperature. |
 
 ## Logs
 
