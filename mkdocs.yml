@@ -2,3 +2,6 @@ site_name: NASA NOAA SWPC Exporter
 
 plugins:
   - techdocs-core
+
+nav:
+  - Home: index.md
