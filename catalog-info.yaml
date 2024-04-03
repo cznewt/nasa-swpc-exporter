@@ -7,6 +7,11 @@ spec:
   profile:
     displayName: NASA
   children: []
+  links:
+    - url: https://www.nasa.gov/
+      title: Homepage
+      icon: documentation
+      type: documentation
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -16,6 +21,9 @@ metadata:
   annotations:
     backstage.io/techdocs-ref: dir:.
     demo.backstage.io/techdocs-builder: local
+  tags:
+    - python
+    - metrics
 spec:
   domain: monitoring
   type: service
@@ -34,3 +42,8 @@ metadata:
 spec:
   type: rest-api
   owner: group:nasa
+  links:
+    - url: https://www.swpc.noaa.gov/
+      title: Homepage
+      icon: documentation
+      type: documentation
