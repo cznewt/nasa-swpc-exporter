@@ -1,0 +1,17 @@
+apiVersion: v2
+name: nasa-swpc-exporter
+description: Prometheus exporter for NASA NOAA SWPC space weather data
+type: application
+version: 0.1.0
+appVersion: "latest"
+keywords:
+  - prometheus
+  - exporter
+  - space-weather
+  - nasa
+  - swpc
+home: https://github.com/cznewt/nasa-swpc-exporter
+sources:
+  - https://github.com/cznewt/nasa-swpc-exporter
+maintainers:
+  - name: cznewt

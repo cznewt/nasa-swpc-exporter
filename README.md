@@ -11,6 +11,33 @@ Space Weather Prediction Center.
 * **X-ray Flux** - GOES Solar X-ray Flux
 * **Proton Flux** - GOES Integral Proton Flux
 
+## Usage
+
+### Helm Chart
+
+Install with defaults
+
+```
+helm install nasa-swpc-exporter ./manifests/nasa-swpc-exporter-chart
+
+```
+
+Install with Prometheus Operator support
+
+```
+helm install nasa-swpc-exporter ./manifests/nasa-swpc-exporter-chart \
+  --set serviceMonitor.enabled=true \
+  --set serviceMonitor.labels.prometheus=kube-prometheus
+```
+
+Verify deployment
+
+```
+kubectl get pods -l app.kubernetes.io/name=nasa-swpc-exporter
+kubectl port-forward svc/nasa-swpc-exporter 9468:9468
+curl http://localhost:9468/metrics
+```
+
 ## Configuration
 
 The exporter can be configured using the following environment variables:
@@ -66,7 +93,6 @@ The exporter exposes the following Prometheus metrics:
 - `proton_flux_60mev`: GOES integral proton flux ≥60 MeV (particles/cm²/s/sr).
 - `proton_flux_100mev`: GOES integral proton flux ≥100 MeV (particles/cm²/s/sr).
 - `proton_flux_500mev`: GOES integral proton flux ≥500 MeV (particles/cm²/s/sr).
-
 
 ## References
 

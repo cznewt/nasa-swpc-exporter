@@ -1,34 +1,25 @@
 {
+    "version": 1,
     "dependencies": [
         {
-            "name": "grafonnet",
             "source": {
                 "git": {
-                    "remote": "https://github.com/grafana/grafonnet-lib",
-                    "subdir": "grafonnet"
+                    "remote": "https://github.com/grafana/grafonnet.git",
+                    "subdir": "gen/grafonnet-latest"
                 }
             },
-            "version": "master"
+            "version": "main",
+            "name": "grafonnet"
         },
         {
-            "name": "grafana-builder",
             "source": {
                 "git": {
-                    "remote": "https://github.com/grafana/jsonnet-libs",
-                    "subdir": "grafana-builder"
-                }
-            },
-            "version": "master"
-        },
-        {
-            "name": "promgrafonnet",
-            "source": {
-                "git": {
-                    "remote": "https://github.com/kubernetes-monitoring/kubernetes-mixin",
-                    "subdir": "lib/promgrafonnet"
+                    "remote": "https://github.com/grafana/jsonnet-libs.git",
+                    "subdir": "common-lib"
                 }
             },
             "version": "master"
         }
-    ]
+    ],
+    "legacyImports": true
 }
