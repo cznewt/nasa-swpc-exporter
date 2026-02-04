@@ -1,0 +1,8 @@
+services:
+  nasa-swpc-exporter:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    image: ghcr.io/cznewt/nasa-swpc-exporter:latest
+    expose:
+      - 9468:9468
