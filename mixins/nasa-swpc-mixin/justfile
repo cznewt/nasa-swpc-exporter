@@ -8,11 +8,11 @@ install-vendor:
     @docker run --rm -v $(pwd):/source ghcr.io/cznewt/monitor-tools:latest install-standalone-mixin
 
 clean-vendor:
-	rm -rf vendor
-	rm jsonnetfile.lock.json
+	  @rm -rf vendor
+	  @rm jsonnetfile.lock.json
 
 clean-builds:
-	rm -rf out
+	  @rm -rf out
 
 format-jsonnet:
     @echo "Formatting jsonnet files..."
